@@ -1,0 +1,3 @@
+/home/llr/ilc/shi/code/SiWECAL-Sim/processors/lib/libDigitization.so.1.0.0
+/home/llr/ilc/shi/code/SiWECAL-Sim/processors/lib/libDigitization.so.1.0
+/home/llr/ilc/shi/code/SiWECAL-Sim/processors/lib/libDigitization.so

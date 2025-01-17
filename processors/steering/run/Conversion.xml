@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<marlin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ilcsoft.desy.de/marlin/marlin.xsd">
+	<execute>
+		<processor name="SiWECALConversion"></processor>
+	</execute>
+	<global>
+		<parameter name="LCIOInputFiles">
+		/data_ilc/flc/jimenez/simulations/TB2022-06/CONF6/lcio/ECAL_QGSP_BERT_conf6_mu-_150GeV_10.slcio
+		</parameter>
+		<parameter name="MaxRecordNumber" value="5000"></parameter>
+		<parameter name="SkipNEvents" value="0"></parameter>
+		<parameter name="SupressCheck" value="false"></parameter>
+		<parameter name="Verbosity" options="DEBUG0-4,MESSAGE0-4,WARNING0-4,ERROR0-4,SILENT">DEBUG</parameter>
+	</global>
+	<constants></constants>
+	<processor name="SiWECALConversion" type="ConversionProcessor">
+		<parameter name="Input_Collections" type="string">SiEcalCollection</parameter>
+		<parameter name="SiThicknesses" type="float">650 650 650 650 500 500 500 500 500 500 320 320 320 320 320</parameter>
+		<parameter name="ConvAuxFile" type="string">/grid_mnt/data__DATA/data.polcalice/data/flc/shi/SandBox/ECAL_QGSP_BERT_conf6_mu-_150GeV_5kevt_conversion.root</parameter>
+		<parameter name="MIPFitMode" type="int">1</parameter>
+	</processor>
+</marlin>

@@ -1,0 +1,7 @@
+geometry_folder: /home/llr/ilc/shi/code/SiWECAL-Sim/generation/geometry/
+ilcsoft_path: /cvmfs/ilc.desy.de/sw/x86_64_gcc82_centos7/v02-02-03/
+root_path: /cvmfs/ilc.desy.de/sw/x86_64_gcc49_sl6/v01-19-06/root/6.08.06/ 
+data_path: /data_ilc/flc/shi/simulations/
+physics_list: QGSP_BERT
+#submit_command: /opt/exp_soft/cms/t3/t3submit -short
+submit_command: /grid_mnt/vol_home/llr/ilc/shi/t3submit_el7 -short
