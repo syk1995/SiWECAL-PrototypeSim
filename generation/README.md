@@ -1,10 +1,12 @@
 # Generation of beam events and the SiW-ECAL
 
-The generation is based on the [DD4hep](https://github.com/iLCSoft/lcgeo) models for detectors.
+The generation is based on the [DD4hep](https://github.com/iLCSoft/lcgeo) models for detectors, and general [DD4hep] models(https://github.com/AIDASoft/DD4hep/blob/master/DDDetectors/src/BoxSegment_geo.cpp)
 
 ## Setup
 
-The software here has been tested with LCIO: `source /cvmfs/ilc.desy.de/sw/x86_64_gcc82_centos7/v02-02-03/init_ilcsoft.sh`
+Before 2025-03 TB, the environment setup: `source /cvmfs/ilc.desy.de/sw/x86_64_gcc82_centos7/v02-02-03/init_ilcsoft.sh`
+Since 2025-03 TB, the environment setup: `source /cvmfs/sw.hsf.org/key4hep/setup.sh`
+In LLR server, simply:`source /home/llr/ilc/shi/key4hep/env.sh`
 
 ## Structure
 
@@ -40,6 +42,9 @@ Defined in `confs.py`. A configuration has per layer tree entries: [Tungsten thi
   - CONF6: 8 x 4.2 mm + 7 x 5.6 mm Tungsten. Slab arrangement used in june TB.
   - CONF7: No Tungsten, same slab arrangement as CONF6.
   - CONF[8,9]: Analogous to CONF[6,7] but handwritten to have 11mm squared cells for resolution studies.
+
+- 2025-03 (DESY):
+  - CONF0: single layer without tungsten, 500 um Si. Used for Sr-90 test. Attention that the slab was reversed: Sr90->PCB->Si. The SKIROC chip was added in this geometry.  
 
 ### Visualization
 

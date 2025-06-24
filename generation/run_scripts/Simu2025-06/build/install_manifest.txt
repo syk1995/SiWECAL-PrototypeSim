@@ -1,0 +1,4 @@
+/home/llr/ilc/shi/code/SiWECAL-Prototype/generation/run_scripts/Simu2025-06/install/lib64/libDD4hepTutorials.components
+/home/llr/ilc/shi/code/SiWECAL-Prototype/generation/run_scripts/Simu2025-06/install/lib64/libDD4hepTutorials.so
+/home/llr/ilc/shi/code/SiWECAL-Prototype/generation/run_scripts/Simu2025-06/install/lib64/libsdaction.components
+/home/llr/ilc/shi/code/SiWECAL-Prototype/generation/run_scripts/Simu2025-06/install/lib64/libsdaction.so

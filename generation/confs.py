@@ -274,4 +274,7 @@ W_Confs = {
                            [5.6, True, 500],
                            [5.6, True, 500],
                         ],
+    #Single layer for Sr-90 commissioning
+    "TB2025-03_CONF0" : [ [0, True, 500], # no absorber
+                        ],  
     }

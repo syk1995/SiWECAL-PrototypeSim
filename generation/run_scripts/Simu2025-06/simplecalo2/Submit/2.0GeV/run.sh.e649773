@@ -1,0 +1,8 @@
+Unloading compilers/gcc/13.x.x
+Unloading python/3.12.4
+Unloading torch/latest-312-cpu <aL>
+Unloading python/.3.12.4 <aL>
+Loading python/3.12.4
+  Loading requirement: python/.3.12.4 torch/latest-312-cpu
+/home/llr/ilc/shi/code/SiWECAL-Prototype/generation/run_scripts/Simu2025-06/env.sh: line 5: k4_local_repo: command not found
+Error in <TUnixSystem::FindDynamicLibrary>: libDDCore[.so | .dll | .dylib | .sl | .dl | .a] does not exist in /cvmfs/sw.hsf.org/key4hep/releases/2025-05-29/x86_64-almalinux9-gcc14.2.0-opt/marlinkinfit/0.6.1-nzmofy/lib:/cvmfs/sw.hsf.org/key4hep/releases/2024-10-03/x86_64-almalinux9-gcc14.2.0-opt/fastjet/3.4.2-b5k732/lib:/data_ilc/flc/shi/miniconda3/envs/key4hep/lib:/opt/exp_soft/llr/root/v6.32-el9-gcc13xx-py3124/lib:/opt/rh/gcc-toolset-13/root/usr/lib64/:/opt/rh/gcc-toolset-13/root/usr/lib/:/opt/exp_soft/llr/python/3.12.4/el9/lib/python3.12:/opt/exp_soft/llr/python/3.12.4/el9/lib:.:/grid_mnt/opt__exp_soft/llr/root/v6.32-el9-gcc13xx-py3124/lib:/lib64/glibc-hwcaps/x86-64-v2:/lib64/tls/x86_64/x86_64:/lib64/tls/x86_64:/lib64/tls/x86_64:/lib64/tls:/lib64/x86_64/x86_64:/lib64/x86_64:/lib64/x86_64:/lib64:/usr/lib64/glibc-hwcaps/x86-64-v2:/usr/lib64/tls/x86_64/x86_64:/usr/lib64/tls/x86_64:/usr/lib64/tls/x86_64:/usr/lib64/tls:/usr/lib64/x86_64/x86_64:/usr/lib64/x86_64:/usr/lib64/x86_64:/usr/lib64:/data_ilc/flc/shi/miniconda3/envs/key4hep/lib:/opt/exp_soft/llr/root

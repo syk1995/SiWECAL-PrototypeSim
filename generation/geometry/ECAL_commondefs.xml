@@ -77,6 +77,7 @@
     <constant name="Ecal_PcbThickness" value="1.7*mm"/> 
     <!-- TODO: missing chip!! --> 
     <constant name="Ecal_ChipThickness" value="1.2*mm"/> 
+    <constant name="Ecal_ChipDimension" value="17*mm"/>
 
     <!-- this is the gap within a slab (electronics, etc) -->
     <!-- <constant name="Ecal_GapThickness" value="Ecal_slab_thickness - Ecal_AlThickness - Ecal_PcbThickness - Ecal_WaferThickness - Ecal_KaptonThickness - Ecal_CFThickness - Ecal_GlueThickness_pcb - Ecal_GlueThickness_kap"/> -->
