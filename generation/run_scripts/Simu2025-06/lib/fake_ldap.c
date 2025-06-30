@@ -1,0 +1,2 @@
+void ldap_init() {}
+

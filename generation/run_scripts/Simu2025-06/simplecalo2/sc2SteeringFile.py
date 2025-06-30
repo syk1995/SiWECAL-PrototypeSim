@@ -299,7 +299,7 @@ SIM.gun.phiMax = None
 SIM.gun.phiMin = None
 
 ##  position of the particle gun, 3 vector 
-SIM.gun.position = (0.25*cm, 0.25*cm, -2.0*m)
+SIM.gun.position = (2.5, 2.5, -200.0*mm)
 
 ## Maximal polar angle for random distribution
 SIM.gun.thetaMax = None

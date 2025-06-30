@@ -1,4 +1,5 @@
-source /home/llr/ilc/shi/key4hep/env.sh
+#source /home/llr/ilc/shi/key4hep/env.sh
+source env.sh
 rm -r build
 mkdir build
 cd build

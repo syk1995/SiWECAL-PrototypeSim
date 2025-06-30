@@ -27,7 +27,7 @@ if(QT_DEPLOY_PREFIX STREQUAL "")
     set(QT_DEPLOY_PREFIX .)
 endif()
 if(NOT QT_DEPLOY_IGNORED_LIB_DIRS)
-    set(QT_DEPLOY_IGNORED_LIB_DIRS "/opt/exp_soft/llr/python/3.12.4/el9/lib64;/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0;/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib64;/lib64;/usr/lib64;/cvmfs/sw.hsf.org/key4hep/releases/2024-10-03/x86_64-almalinux9-gcc14.2.0-opt/libzmq/4.3.5-rumdx7/lib;/cvmfs/sw.hsf.org/key4hep/releases/2024-10-03/x86_64-almalinux9-gcc14.2.0-opt/intel-oneapi-mkl/2024.2.1-coyg5v/mkl/2024.2/lib;/opt/exp_soft/llr/python/3.12.4/el9/lib/python3.12;/opt/exp_soft/llr/python/3.12.4/el9/lib;/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib")
+    set(QT_DEPLOY_IGNORED_LIB_DIRS "/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib/gcc/x86_64-pc-linux-gnu/14.2.0;/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib64;/lib64;/usr/lib64;/cvmfs/sw.hsf.org/key4hep/releases/2024-10-03/x86_64-almalinux9-gcc14.2.0-opt/libzmq/4.3.5-rumdx7/lib;/cvmfs/sw.hsf.org/key4hep/releases/2024-10-03/x86_64-almalinux9-gcc14.2.0-opt/intel-oneapi-mkl/2024.2.1-coyg5v/mkl/2024.2/lib;/cvmfs/sw.hsf.org/contrib/x86_64-almalinux9-gcc11.4.1-opt/gcc/14.2.0-yuyjov/lib")
 endif()
 
 # These are internal implementation details. They may be removed at any time.

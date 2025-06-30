@@ -138,8 +138,8 @@ bool Geant4SensitiveAction<simplecaloSDData>::process(
     int calolayer = decoder->get(VolID, "calolayer");
     int abslayer  = decoder->get(VolID, "abslayer");
     int cellid    = decoder->get(VolID, "cellid");
-    std::cout << "Creating new hit: CaloLayerID: " << calolayer
-         << " AbsLayerID: " << abslayer << " CellID: " << cellid << std::endl;*/
+    std::cout <<VolID<<" Creating new hit: CaloLayerID: " << calolayer
+    << " AbsLayerID: " << abslayer << " CellID: " << cellid << std::endl;*/
     // we divide the coordinated by 10 to save them as cm
     Position HitCellPos(CellPos.x() / 10, CellPos.y() / 10, CellPos.z() / 10);
     hit->position = CellPos; // this should be assigned only once

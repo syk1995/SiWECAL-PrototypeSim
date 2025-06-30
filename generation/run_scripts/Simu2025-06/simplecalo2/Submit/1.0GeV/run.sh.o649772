@@ -1,6 +1,0 @@
-llrgrwn031.in2p3.fr
-key4hep ENV has been Set up
-dd4hep_base      ERROR +--------------------------------------------------------------------------------------------------------+
-dd4hep_base      ERROR |  Failed to load dd4hep base library:                                                                   |
-dd4hep_base      ERROR |  dd4hep.py: Failed to load the dd4hep library libDDCore: No such file or directory                     |
-dd4hep_base      ERROR +--------------------------------------------------------------------------------------------------------+

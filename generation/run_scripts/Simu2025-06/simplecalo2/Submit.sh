@@ -9,7 +9,7 @@ SubmitPath=$PWD/Submit
 rm -r ${SubmitPath}
 mkdir -p ${SubmitPath}
 EventNumber=5000
-Energy=(0.05 0.1 0.15 0.2 0.25 0.5 0.75 1.0 2.0 5 10 20 30 40 50 60)
+Energy=(0.05 0.1 0.15 0.2 0.25 0.5 0.75 1.0 2.0 5.0 10.0 20.0 30.0 40.0 50.0 60.0)
 #Energy=(20.0)
 
 for E in "${Energy[@]}"
@@ -31,11 +31,11 @@ do
     cat <<EOF > ${submit}
 #!/bin/bash
 hostname
-source ${env}
+. ${env}
 ddsim --steeringFile ${new_py}
 EOF
     chmod +x ${submit}
     cd ${SubmitPath}/${E}GeV
-    t3submit ${submit} 
+    t3submit -singleout ${submit} 
 done
 cd ${pwd}
