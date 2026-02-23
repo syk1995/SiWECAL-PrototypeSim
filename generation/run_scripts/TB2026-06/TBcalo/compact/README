@@ -1,0 +1,9 @@
+###CONF0-5 are old files###
+CONF0: Si 0.15*5 mm
+CONF1: Si 0.75 mm
+CONF2: Si 5*5->10*10 mm?
+CONF3: Si 0.75 mm with 1 mm cellsize; 120 layers
+CONF4: Si 0.15 mm with 1 mm cellsize; 120 layers
+CONF5: Si 0.75 mm; 120 layers with timing
+###TB2022-06###
+CONF6: Si 5*5*0.5mm, 15 layers with different tungsten thickness

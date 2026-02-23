@@ -8,5 +8,6 @@
 - `analysis`: Validation and comparison of simulation and data.
 
 # Contact persons
+Y. Shi: shi at llr.in2p3.fr
 A. Irles: adrian.irles at ific.uv.es
 F. Jiménez Morales: fabricio.jm at cern.ch

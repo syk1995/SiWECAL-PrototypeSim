@@ -1,0 +1,4 @@
+/run/initialize
+/gps/particle e-
+/gps/energy 10 GeV
+/run/beamOn 1

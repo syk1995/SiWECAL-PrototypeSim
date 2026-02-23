@@ -1,0 +1,153 @@
+<lccdd>
+<!-- #==========================================================================
+     #  AIDA Detector description implementation 
+     #==========================================================================
+     # Copyright (C) Organisation europeenne pour la Recherche nucleaire (CERN)
+     # All rights reserved.
+     #
+     # For the licensing terms see $DD4hepINSTALL/LICENSE.
+     # For the list of contributors see $DD4hepINSTALL/doc/CREDITS.
+     #
+     #==========================================================================
+-->
+  <info name="simplecalo2"
+    title="A simple sandwich calorimeter simulation"
+    author="Lorenzo Pezzotti"
+    url="None"
+    status="development"
+    version="0.1">
+    <comment></comment>
+  </info>
+
+  <define>
+    <constant name="world_side"   value="20*m"/>
+    <constant name="world_x"      value="world_side/2"/>
+    <constant name="world_y"      value="world_side/2"/>
+    <constant name="world_z"      value="world_side/2"/>
+    <constant name="CaloZ"        value="2*m"/>
+    <constant name="AbsLayerZ"    value="0.7*mm"/>
+    <constant name="CarbonFiberLayerZ"    value="1.5*mm"/>
+    <constant name="Cathode1LayerZ"    value="0.1*mm"/>
+    <constant name="Glue1LayerZ"    value="0.1*mm"/>
+    <constant name="SensLayerZ"   value="0.75*mm"/>
+    <constant name="CellZ"        value="0.75*mm"/>
+    <constant name="Glue2LayerZ"    value="0.1*mm"/>
+    <constant name="Cathode2LayerZ"    value="0.1*mm"/>
+    <constant name="PCBLayerZ"    value="1.7*mm"/>
+    <constant name="CaloLayerZ"   value="AbsLayerZ + CarbonFiberLayerZ + Cathode1LayerZ 
+    + Glue1LayerZ + SensLayerZ + Glue2LayerZ + Cathode2LayerZ + PCBLayerZ"/>
+
+    <constant name="CaloX"        value="20*cm"/>
+    <constant name="CellX"        value="1.0*mm"/>
+    <constant name="CaloY"        value="CaloX"/>
+    <constant name="AbsLayerX"    value="CaloX"/>
+    <constant name="AbsLayerY"    value="CaloY"/>
+    <constant name="PCBLayerX"    value="CaloX"/>
+    <constant name="PCBLayerY"    value="CaloY"/>
+    <constant name="CarbonFiberLayerX"    value="CaloX"/>
+    <constant name="CarbonFiberLayerY"    value="CaloY"/>
+    <constant name="Cathode1LayerX"    value="CaloX"/>
+    <constant name="Cathode1LayerY"    value="CaloY"/>
+    <constant name="Glue1LayerX"    value="CaloX"/>
+    <constant name="Glue1LayerY"    value="CaloY"/>
+    <constant name="SensLayerX"   value="CaloX"/>
+    <constant name="SensLayerY"   value="CaloY"/>
+    <constant name="CellY"        value="CellX"/>
+    <constant name="Glue2LayerX"    value="CaloX"/>
+    <constant name="Glue2LayerY"    value="CaloY"/>
+    <constant name="Cathode2LayerX"    value="CaloX"/>
+    <constant name="Cathode2LayerY"    value="CaloY"/>
+    <constant name="CaloLayerX"   value="CaloX"/>
+    <constant name="CaloLayerY"   value="CaloY"/>
+    <constant name="LayersNumber" value="120"/>
+  </define>
+
+  <includes>
+    <gdmlFile  ref="elements.xml"/>
+    <gdmlFile  ref="materials.xml"/>
+    <gdmlFile  ref="extra_materials.xml"/>
+  </includes>
+  
+  <materials>
+    <!--material name="Vacuum">
+      <D type="density" unit="g/cm3" value="0.0000000001" />
+      <fraction n="0.754" ref="N"/>
+      <fraction n="0.234" ref="O"/>
+      <fraction n="0.012" ref="Ar"/>
+    </material>
+    <material name="Air">
+      <D type="density" unit="g/cm3" value="0.0012"/>
+      <fraction n="0.754" ref="N"/>
+      <fraction n="0.234" ref="O"/>
+      <fraction n="0.012" ref="Ar"/>
+    </material-->
+    <material name="Brass">
+      <D type="density" unit="g/cm3" value="8.44" />
+      <fraction n="0.7" ref="Cu" />
+      <fraction n="0.3" ref="Zn" />
+    </material>
+  </materials>
+
+  <!-- Define visualization attributes. Vis attributes contains an
+       alpha value for transparency, r-g-b for color, show daughters possibility true/false
+       and visibile (or invisible) true/false.
+  -->
+  <display>
+    <vis name="CaloVis" alpha="1.0" r="0.0" g="1.0" b="0.0" showDaughters="true" visible="false"/>
+    <vis name="CaloLayerVis" alpha="1.0" r="0.0" g="0.0" b="1.0" showDaughters="true" visible="true"/>
+    <vis name="AbsLayerVis" alpha="1.0" r="1.0" g="0.624" b="0.0" showDaughters="true" visible="true"/>
+    <vis name="PCBLayerVis" alpha="1.0" r="0.0" g="1.0" b="0.0" showDaughters="true" visible="true"/>
+    <vis name="SensLayerVis" alpha="1.0" r="1.0" g="0.0" b="0.0" showDaughters="true" visible="true"/>
+    <vis name="CellVis" alpha="1.0" r="0.95" g="0.92" b="0.92" showDaughters="true" visible="true"/>
+    <vis name="KaptonVis" alpha="1.0" r="0.83" g="0.68" b="0.21" showDaughters="true" visible="true"/>
+    <vis name="CarbonFiberVis" alpha="1.0" r="0.41" g="0.41" b="0.41" showDaughters="true" visible="true"/>
+  </display>
+
+  <!-- Define the detector. A detector has a name, type to be returned in .cpp file with 
+       DECLARE_DETELEMENT(type,create_detector_c++method), vis attributes (optional),
+       and sensitive-detector (true/false), if sensitive="true" a readout must the passed.
+       If a detector contains sub-detectors, their information must be included as below.
+  -->
+
+  <limits>
+    <limitset name="cal_limits">
+      <limit name="step_length_max" particles="*" value="0.5" unit="mm" />
+    </limitset>
+    <limitset name="simplecalo2RegionLimitSet">
+      <limit name="step_length_max" particles="*" value="0.5" unit="mm" />
+    </limitset>
+  </limits>
+
+  <regions>
+    <region name="simplecalo2Region" eunit="MeV" lunit="mm" cut="0.0" threshold="0.0">
+      <limitsetref name="simplecalo2RegionLimitSet"/>
+    </region>
+  </regions>
+
+  <detectors>
+    <detector name="simplecalo2" type="simplecalo2" vis="CaloVis" id ="0" readout="simplecaloRO" region="simplecalo2Region" limits="simplecalo2RegionLimitSet">
+    <type_flags type=" DetType_CALORIMETER + DetType_ELECTROMAGNETIC + DetType_BARREL"/>
+    <dimensions x="CaloX" y="CaloY" z="CaloZ"/>
+      <Calo material="Air" vis="CaloVis"/>
+      <CaloLayer material="Air" x="CaloLayerX" y="CaloLayerY" z="CaloLayerZ" vis="CaloLayerVis"/>
+      <AbsLayer material="TungstenDens1910" x="AbsLayerX" y="AbsLayerY" z="AbsLayerZ" vis="AbsLayerVis"/>
+      <CFLayer material="CarbonFiber" x="CarbonFiberLayerX" y="CarbonFiberLayerY" z="CarbonFiberLayerZ" vis="CarbonFiberVis"/>
+      <Cathode1Layer material="Cu" x="Cathode1LayerX" y="Cathode1LayerY" z="Cathode1LayerZ" vis="KaptonVis"/>
+      <Glue1Layer material="Air" x="Glue1LayerX" y="Glue1LayerY" z="Glue1LayerZ" vis="KaptonVis"/>
+      <SensLayer material="Air" x="SensLayerX" y="SensLayerY" z="SensLayerZ" vis="SensLayerVis"/>
+      <Cell material="Silicon" x="CellX" y="CellY" z="CellZ" sensitive="true" vis="CellVis"/>
+      <Glue2Layer material="Air" x="Glue2LayerX" y="Glue2LayerY" z="Glue2LayerZ" vis="KaptonVis"/>
+      <Cathode2Layer material="Cu" x="Cathode2LayerX" y="Cathode2LayerY" z="Cathode2LayerZ" vis="KaptonVis"/>
+      <PCBLayer material="PCB" x="PCBLayerX" y="PCBLayerY" z="PCBLayerZ" vis="PCBLayerVis"/>
+    </detector>
+  </detectors>
+
+  <readouts>
+    <readout name="simplecaloRO">
+      <!-- NO SPACES BETWEEN ID DESCRIPTORS!!! -->
+      <!-- <id>calolayer:7,abslayer:1,cellid:13</id> -->
+      <id>calolayer:7,abslayer:1,cellid:16</id>
+    </readout>
+  </readouts> 
+
+</lccdd>
